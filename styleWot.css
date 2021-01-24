@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: black;
+    color: white;
+}
+#box{
+    width: 500px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+#entradas{
+    display: grid;
+    grid-row-gap: 10px;
+    width: 210;
+    height: 300px;
+}
+#tanks{
+    margin-left: 20px;
+    display: grid;
+    grid-row-gap: 10px;
+    width: 210;
+    height: 300px;
+}
+input{
+    border: 1px solid white;
+    background: #090909;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    width: 200px;
+    height: 50px;
+}
+button{
+    border: 1px solid white;
+    background: #090909;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+}
+
+
+
+function myTank(hp,armor, calibre, penAp, penAPCR){
+    
+    let projetil = Number(document.getElementById('projetil').value)
+    let  caliber = calibre
+    let bliInimiga = Number(document.getElementById('bliInimiga').value)
+    let angDisparo = Number(document.getElementById('angDisparo').value)
+
+}
