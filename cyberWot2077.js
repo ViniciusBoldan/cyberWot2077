@@ -1,36 +1,41 @@
 let shots = 1
-function myTank(hp,armor, calibre, penAP, penAPCR, dmg){
+function myTank(veicle, hp, armor, calibre, penAP, penAPCR, dmg){
+    document.getElementById('myVeicle').innerText = ` Tanque:  ${veicle}`
+    document.getElementById('enVeicle').innerText = ` Tanque:  ${veicle}`
+    document.getElementById('myHp').innerText = `Hp: ${hp}`
+    document.getElementById('myCaliber').innerText = `Calibre: ${calibre}mm`
+    document.getElementById('enCaliber').innerText = `Calibre: ${calibre}mm`
+    document.getElementById('myPen').innerText = `Penetração ${penAP}mm`
+    document.getElementById('enPen').innerText = `Penetração ${penAP}mm`
 
     let projetil = Number(document.getElementById('projetil').value)
     let bliInimiga = Number(document.getElementById('bliInimiga').value)
     let angDisparo = Number(document.getElementById('angDisparo').value)
     let distancia = Number(document.getElementById('distancia').value)
 
-    let blindagemRelativa= bliInimiga / Math.cos(angDisparo*(projetil* 1.4*calibre)/bliInimiga)
+    let blindagemRelativa= armor / Math.cos(angDisparo*(projetil* 1.4*calibre)/armor)
 
     if(blindagemRelativa < 0){
          blindagemRelativa = Math.abs(blindagemRelativa)
     }
 
-    console.log(`${shots++}° Disparo`)
-    console.log(`Blindagem Relativa: ${blindagemRelativa}`)
+    document.getElementById('tiros').innerText = `${shots++}° DIsparo`
+    document.getElementById('bliRelativa').innerText = `Blindagem Relativa: ${blindagemRelativa}`
 
     let alea = Math.round(Math.random()*90)+16 - distancia
+    document.getElementById('chances').innerText = `Chances de acerto: ${alea}%`
 
     if(alea <= 49){
-        if(alea > 39 || alea < 50){
-            console.log(`Essa foi pro pouco`)
-        }else{
-            console.log(`Não acertamos o inimigo. ${alea}% de chances de acerto`)
-        }
+            document.getElementById('frase').innerText =`Essa foi pro pouco`
     }else{
-        console.log(`${alea}% De chances de acerto. Acertamos o Inimigo`)
+        document.getElementById('frase').innerText = `Acertamos o Inimigo`
 
-        if(blindagemRelativa < penAPCR){
-            let newHP = hp - dmg
-        console.log(`Penetramos a blindagem inimiga. Hp do inimigo: ${newHP}/${hp}`)
+        if(blindagemRelativa < penAP){
+
+        document.getElementById('penOrNot').innerText = `Penetramos a blindagem inimiga`
+        document.getElementById('enHp').innerText = `Hp do inimigo: ${hp-dmg}`
     }else{
-        console.log(`Não penetramso a blindagem inimiga`)
+        document.getElementById('penOrNot').innerText = `Não penetramso a blindagem inimiga`
     }
 }
 }

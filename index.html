@@ -19,14 +19,42 @@
             </div>
 
             <div id="tanks">
-                <!hp, blindagem media, calibre, penetraçãoAP, penetração APCR//->
-                <button onclick="myTank(950, 61, 152, 110, 136, 640)">KV-2</button>
-                <button onclick="myTank(2750, 175, 150, 258, 334, 640)">E-100</button>
-                <button onclick="myTank(1700, 150, 105, 225, 285, 220)">Tiger ll</button>
-                <button onclick="myTank(510, 24, 50, 65, 102, 40)">Pz-lll</button>
-                <button onclick="myTank(3000, 175, 128, 246, 311, 400)">Maus</button>
+                
+                <button onclick="myTank('KV-2', 950, 61, 152, 110, 136, 640)">KV-2</button>
+                <button onclick="myTank('E-100', 2750, 175, 150, 258, 334, 640)">E-100</button>
+                <button onclick="myTank('Tiger ll', 1700, 150, 105, 225, 285, 220)">Tiger ll</button>
+                <button onclick="myTank('Pz-lll', 510, 24, 50, 65, 102, 40)">Pz-lll</button>
+                <button onclick="myTank('Maus', 3000, 175, 128, 246, 311, 400)">Maus</button>
             </div>
 
+        </div>
+
+        <div id="display">
+            <section>
+                <h1>Dados do Tanque</h1>
+                <p id="myVeicle"></p>
+                <p id="myHp"></p>
+                <p id="myCaliber"></p>
+                <p id='myPen'></p>
+            </section>
+            <section>
+                <h1>Status do Disparo</h1>
+                <p id="tiros">0 Disparos efetuados</p>
+                <p id='bliRelativa'></p>
+                <p id='chances'></p>
+                <p id='frase'></p>
+                <p id="penOrNot"></p>
+            </section>
+            <section>
+                <h1>Dados do inimigo</h1>
+                <p id="enVeicle"></p>
+                <p id="enHp"></p>
+                <p id="enCaliber"></p>
+                <p id=enPen></p>
+            </section>
+
+    <button id="ola" value="10,20,30" onclick="blyat(10,20,30)">blyatizar</button>
+    <button onclick="show()">showzar</button>
         </div>
 
         <script src="cyberWot2077.js" type="text/javascript"></script>

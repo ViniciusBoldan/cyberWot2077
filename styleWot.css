@@ -6,6 +6,7 @@
 body{
     background: black;
     color: white;
+    display: flex;
 }
 #box{
     width: 500px;
@@ -13,6 +14,7 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 100px;
+    margin-right: 50px;
 }
 
 #entradas{
@@ -47,13 +49,22 @@ button{
     height: 50px;
 }
 
-
-
-function myTank(hp,armor, calibre, penAp, penAPCR){
-    
-    let projetil = Number(document.getElementById('projetil').value)
-    let  caliber = calibre
-    let bliInimiga = Number(document.getElementById('bliInimiga').value)
-    let angDisparo = Number(document.getElementById('angDisparo').value)
-
+#display{
+    background: #101010;
+    font-size: 20px;
+    text-align: center;
+    width: 300px;
+    height: 900px;
+    margin-top: 50px;
+}
+section{
+    width: 100%;
+    height: 298;
+    border: 1px solid white;
+}
+h1{
+    padding: 10px;
+}
+p{
+    margin-top: 10px;
 }
