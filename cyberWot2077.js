@@ -1,5 +1,5 @@
 let shots = 1
-function myTank(veicle, hp, armor, calibre, penAP, penAPCR, dmg){
+function myTank(){
     document.getElementById('myVeicle').innerText = ` Tanque:  ${veicle}`
     document.getElementById('enVeicle').innerText = ` Tanque:  ${veicle}`
     document.getElementById('myHp').innerText = `Hp: ${hp}`
@@ -39,3 +39,10 @@ function myTank(veicle, hp, armor, calibre, penAP, penAPCR, dmg){
     }
 }
 }
+
+/*um jeito de fazer exatamente oq ue tu quer: 
+Voce faz duas funçõs, quase iguais, mas uma define os dados do tanque aliado, e outra do inimigo.
+As duas vão escrever os dados do tanque no display, mais ou menos como ja fazer.
+Embaixo do display fica o botão 'disparo', que faz a magica acontecer.
+Agora eé simples. o botão de disparo, pega os valores do display, e coloca nas variaveis que fazem os calculos.
+*/
