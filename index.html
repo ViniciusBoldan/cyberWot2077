@@ -1,4 +1,4 @@
-<html lang="ptBR">
+<html>
 
     <head>
         <title>CyberWot2077</title>
@@ -27,37 +27,36 @@
             <div id="tanksData">
                 <section id="section1">
                     <h1>Voce</h1>
-                    <p id="myVeicle">Veicle</p>
-                    <p id="myArmor">Armor</p>
-                    <p id="myHp">Hp</p>
-                    <p id="myProje">Projectile</p>
-                    <p id="myCaliber">Caliber</p>
-                    <p id='myPen'>Penetration</p>
-                    <p id="myDmg">Damage</p>
-                    <p id="myAngle">Shot Angle</p>
-                    <p id="myDistance">Distance</p>
+                    Veicle<p id="myVeicle"></p>
+                    Armor<p id="myArmor"></p>
+                    HP<p id="myHp"></p>
+                    Projectile<p id="myProje"></p>
+                    Caliber<p id="myCaliber"></p>
+                    Penetration<p id='myPen'></p>
+                    Damage<p id="myDmg"></p>
+                    Shot Angle<p id="myAngle"></p>
+                    Distance<p id="myDistance"></p>
                 </section>
                 <section id="section2">
                     <h1>Inimigo</h1>
-                    <p id="enVeicle">Veicle</p>
-                    <p id="enArmor">Armor</p>
-                    <p id="enHp">Hp</p>
-                    <p id="enProje">Projectile</p>
-                    <p id="enCaliber">Caliber</p>
-                    <p id="enPen">Penetration</p>
-                    <p id="enDmg">Damage</p>
-                    <p id="enAngle1">Shot Angle</p>
-                    <p id="enDistance1">Distance</p>
+                    Veicle<p id="enVeicle"></p>
+                    Armor<p id="enArmor"></p>
+                    HP<p id="enHp"></p>
+                    Projectile<p id="enProje"></p>
+                    Caliber<p id="enCaliber"></p>
+                    Penetration<p id="enPen"></p>
+                    Damage<p id="enDmg"></p>
+                    Shot Angle<p id="enAngle1"></p>
+                    Distance<p id="enDistance1"></p>
                 </section>
             </div>
 
             <div id="gameData">
                     <h1>Status do Disparo</h1>
-                    <p id="tiros">Shots</p>
-                    <p id='bliRelativa'>Relative Armor</p>
-                    <p id='chances'>Hit Chances</p>
-                    <p id='frase'>Hit or Not</p>
-                    <p id="penOrNot">Penetration or Not</p>
+                    Battle Shot<p id="tiros"></p>
+                    Enemie Relative Armor<p id='enBliRelativa'></p>
+                    My Relative Armor<p id='myBliRelativa'></p>
+                    Se seu HP for NaN, então voce morreu.
             </div>
         </div>
 
@@ -76,6 +75,7 @@
                 <button onclick="enTank('Maus', 3000, 175, 128, 246, 400)">Maus</button>
             </div>
         </div>
+
 
         <div id="shotButton">
             <button id="shoting" onclick="shotIt()">Shot</button>
